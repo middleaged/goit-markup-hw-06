@@ -264,27 +264,74 @@ ul {
   margin-right: auto;
 }
 .modal-form-field {
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 .modal-title{
   font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    letter-spacing: 0.03em;
-    margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
 }
+
 .form-label{
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: var(--secound-text-collor);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--secound-text-collor);
 }
 .form-input{
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 448px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.modal-textarea
+{
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 5px;
+}
+textarea{
+  resize: none;
+}
+textarea::placeholder{
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  padding-top: 12px;
+  padding-left: 16px;
+}
+.policy-checkbox{
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secound-text-collor);
+}
+.contract{
+  color: var(--accent);
+  text-decoration: underline;
+}
+.modal-submit{
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--third-color-hero);
 }
 /* Особливості */
 .features-container {
@@ -590,17 +637,24 @@ ul {
   padding-left: 16px;
 }
 .button-form {
+  position: absolute;
   width: 200px;
   height: 50px;
   background-color: var(--accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0px;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--main-background-color);
+}
+.icon-footer-form{
+  position: relative;
+  top: 15%;
+  left: 10px;
 }
 /* Портфоліо */
 .filters-container {
