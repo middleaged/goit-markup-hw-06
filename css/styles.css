@@ -336,9 +336,9 @@ textarea::placeholder{
   border-radius: 4px;
 }
 .checkbox:checked + .modal-check-icon{
-background-color: var(--accent);
-background-image: url(../images/symbol-defs.svg); 
-
+  background-color: var(--accent);
+  background-image: url(../images/symbol-defs.svg); 
+  background-size: contain;
 }
 .modal-submit{
   margin: 0 auto;
