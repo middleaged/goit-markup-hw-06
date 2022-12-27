@@ -252,6 +252,9 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
+.modal-close:hover, .modal-close:focus{
+  fill: var(--accent);
+}
 
 .backdrop.is-hidden {
   opacity: 0;
@@ -273,6 +276,10 @@ ul {
   position: absolute;
   top: 50%;
   left: 12px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .modal-title{
   font-family: 'Roboto';
@@ -296,6 +303,21 @@ ul {
   padding: 10px;
   padding-left: 42px;
   margin-top: 5px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+.modal-form-field:focus-within > .form-input{
+  border-color: var(--accent);
+  outline: none;
+}
+.modal-form-field:focus-within > .modal-form-icon{
+  fill: var(--accent);
+}
+.modal-form-field:focus-within > .modal-textarea{
+  border-color: var(--accent);
+  outline: none;
 }
 .modal-textarea
 {
@@ -306,6 +328,10 @@ ul {
   margin-top: 5px;
   padding-left: 16px;
   padding-top: 12px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 textarea{
   resize: none;
@@ -318,35 +344,59 @@ textarea::placeholder{
   
 }
 .policy-checkbox{
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secound-text-collor);
   position: relative;
 }
 .contract{
+  margin-left: 3px;
   color: var(--accent);
   text-decoration: underline;
 }
+.modal-form-checkbox{
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
 .modal-check-icon{
+  
+  margin-right: 7px;
   display: inline-block;
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color);
-  border-radius: 4px;
+  border-radius: 2px;
+}
+.checkbox{
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .checkbox:checked + .modal-check-icon{
+  border: transparent;
+  border-color: var(--accent);
   background-color: var(--accent);
-  background-image: url(../images/symbol-defs.svg); 
-  background-size: contain;
+  background-origin: border-box;
 }
+.icon-check{
+  position: absolute;
+  left: 3px;
+}
+
 .modal-submit{
+  cursor: pointer;
   margin: 0 auto;
   display: block;
   width: 200px;
   height: 50px;
   background-color: var(--accent);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
   font-weight: 700;
@@ -354,6 +404,14 @@ textarea::placeholder{
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--third-color-hero);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+.modal-submit:hover, .modal-submit:focus{
+  background-color: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* Особливості */
 .features-container {
@@ -649,7 +707,7 @@ textarea::placeholder{
   border-radius: 4px;
   width: 358px;
   height: 50px;
-  background-color: inherit;
+  background-color: inherit; 
 }
 .footer-form-label input::placeholder {
   font-size: 16px;
@@ -660,10 +718,10 @@ textarea::placeholder{
 }
 .button-form {
   position: absolute;
+  cursor: pointer;
   width: 200px;
   height: 50px;
   background-color: var(--accent);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0px;
   font-family: "Roboto";
@@ -672,7 +730,15 @@ textarea::placeholder{
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--main-background-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
+.button-form:hover, .button-form:focus{
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}  
 .icon-footer-form{
   position: relative;
   top: 15%;
